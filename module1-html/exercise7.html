@@ -1,0 +1,12 @@
+<video id="promo" controls oncanplay="readyToPlay()">
+  <source src="promo.mp4" type="video/mp4">
+</video>
+<p id="videoStatus"></p>
+<script>
+  function readyToPlay() {
+    document.getElementById("videoStatus").innerText = "Video ready to play";
+  }
+  window.onbeforeunload = function () {
+    return "You have unsaved changes.";
+  }
+</script>

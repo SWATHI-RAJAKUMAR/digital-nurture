@@ -1,0 +1,18 @@
+<form onsubmit="showConfirmation(); return false;">
+  <input type="text" name="name" placeholder="Full Name" required autofocus>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="date" name="event-date" required>
+  <select name="event-type" required>
+    <option value="">Select Type</option>
+    <option value="music">Music</option>
+    <option value="sports">Sports</option>
+  </select>
+  <textarea name="message" placeholder="Your message..."></textarea>
+  <input type="submit" value="Register">
+  <output id="confirmation"></output>
+</form>
+<script>
+  function showConfirmation() {
+    document.getElementById("confirmation").value = "Thank you! You're registered.";
+  }
+</script>
